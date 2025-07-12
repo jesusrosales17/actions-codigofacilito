@@ -1,0 +1,22 @@
+# nombre del workflow
+name: "Deply CodigoFacilito"
+
+# Trigger
+on:
+  # Evento para el trigger cuando se hace un push a la rama main
+  push:
+    branches: ["main"]
+
+# Jobs
+jobs:
+  #nombre del job
+  deploy-codigofacilito:
+    # Runner sobre el cual se va a ejecutar el job
+    runs-on: ubuntu-latest
+    # Pasos que se van a ejecutar en el job
+    steps:
+    # Con run definimos los pasos que se van a ejecutar
+      run: echo "Hacemos pull del codigo"
+      run: echo "Correr migraciones"
+      run: echo "Generar binario"
+      run: echo "Publicar version"
