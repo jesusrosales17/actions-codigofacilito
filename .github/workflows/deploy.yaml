@@ -15,8 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     # Pasos que se van a ejecutar en el job
     steps:
+      - uses: actions/checkout@v2
+
     # Con run definimos los pasos que se van a ejecutar
-      run: echo "Hacemos pull del codigo"
-      run: echo "Correr migraciones"
-      run: echo "Generar binario"
-      run: echo "Publicar version"
+      - run: echo "Hacemos pull del codigo"
+      - run: echo "Correr migraciones"
+      - run: echo "Generar binario"
+      - run: echo "Publicar version"
